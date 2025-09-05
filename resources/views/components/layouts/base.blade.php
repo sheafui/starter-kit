@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="h-full"
+      lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <meta name="csrf-token"
+              content="{{ csrf_token() }}">
+        <title> Sheaf UI {{ isset($title) ? '| ' . $title : '' }}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
+
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        
+        <style>
+            /* gives the progress bar primary color */
+            :root {
+                --livewire-progress-bar-color: var(--color-primary-brand);
+            }
+        </style>
+
+        @stack('docs-sidebar-styles')
+
+    </head>
+    <script>
+        // this is script is essentiel to prevent page's flicker at render time
+        const loadDarkMode = () => {
+            const theme = localStorage.getItem('theme') ?? 'system'
+
+            if (
+                theme === 'dark' ||
+                (theme === 'system' &&
+                    window.matchMedia('(prefers-color-scheme: dark)')
+                    .matches)
+            ) {
+                document.documentElement.classList.add('dark')
+            }
+        }
+        loadDarkMode();
+        document.addEventListener('livewire:navigated', function() {
+            loadDarkMode();
+        });
+    </script>
+    
+    <body class="bg-background font-sheaf h-full">
+
+        {{ $slot }}
+
+        @livewireScriptConfig
+        {{-- without this it cause flicker when multiple components changes in isolation in the  page --}}
+        <script>
+            loadDarkMode()
+        </script>
+        <x-ui.toast />
+    </body>
+
+</html>
