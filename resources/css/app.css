@@ -1,3 +1,4 @@
+@import './theme.css'; /* By Sheaf.dev */ 
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -9,3 +10,6 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+
+ @custom-variant dark (&:where(.dark, .dark *)); /* By Sheaf.dev */ 

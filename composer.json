@@ -12,7 +12,9 @@
         "php": "^8.2",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "sheaf/cli": "^1.0"
+        "livewire/livewire": "^3.6",
+        "sheaf/cli": "^1.0",
+        "wireui/heroicons": "^2.9"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
