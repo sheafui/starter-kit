@@ -1,9 +1,11 @@
 <div class="mx-auto space-y-20 mt-20">
-    <div class="rounded-box flex flex-col w-full gap-4 lg:flex-row  mt-6 bg-white p-6 dark:bg-neutral-800/10">
+    <div>
+        <x-ui.heading>Account Information</x-ui.heading>
+        <x-ui.text class="opacity-50">update your account public crendetiels</x-ui.text>
         <div class="grow">
             <form 
                 wire:submit="saveChanges"
-                class="space-y-4"
+                class="mt-8 space-y-4 rounded-lg bg-white p-6 dark:bg-neutral-800/10"
             >
                 <x-ui.field>
                     <x-ui.label>name</x-ui.label>
@@ -29,10 +31,12 @@
     </div>
     
     <div>
-        <h2 class="text-base-100 text-base font-semibold leading-7">Change password</h2>
-        <p class="text-base-200 mt-1 text-sm leading-6">Update your security credentials</p>
-        <form wire:submit="updatePassword"
-              class="mt-8 space-y-4 rounded-lg bg-white p-6 dark:bg-neutral-800/10">
+        <x-ui.heading>Change password</x-ui.heading>
+        <x-ui.text class="opacity-50">Update your security credentials</x-ui.text>
+        <form 
+            wire:submit="updatePassword"
+            class="mt-8 space-y-4 rounded-lg bg-white p-6 dark:bg-neutral-800/10"
+        >
             
             <x-ui.field>
                 <x-ui.label>Current Password</x-ui.label>

@@ -1,3 +1,4 @@
+{{-- once I build the sidebar, header and  navlist components I will refactor to them (asap) --}}
 <div>
-    {{-- Care about people's approval and you will be their prisoner. --}}
+    
 </div>

@@ -20,6 +20,10 @@
 
         <x-ui.dropdown.separator />
 
+        <x-ui.dropdown.item :href="route('settings.account')" wire:navigate.live>
+            Account
+        </x-ui.dropdown.item>
+
         <x-ui.dropdown.item :href="route('dashboard')" wire:navigate.live>
             Dashboard
         </x-ui.dropdown.item>

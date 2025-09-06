@@ -1,10 +1,7 @@
 
 <div class="mx-auto mt-24 max-w-xl">
     <x-ui.fieldset>
-        <x-slot name="label">
-            Confirm Password
-        </x-slot>
-        <form wire:submit="confirmPasswordm" x-data="form">
+        <form wire:submit="confirmPasswordm">
             <x-ui.field>
                 <x-ui.label>password</x-ui.label>
                 <x-ui.input

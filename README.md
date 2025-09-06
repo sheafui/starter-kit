@@ -50,6 +50,7 @@ Your starter kit comes pre-loaded with essential UI components:
 - [Theme Switcher](https://sheafui.dev/docs/components/theme-switcher) - Light/dark mode toggle
 - [Toast](https://sheafui.dev/docs/components/toast) - Notification system
 - [Error](https://sheafui.dev/docs/components/error) - Error handling displays
+- [Text](https://sheafui.dev/docs/components/text) - Unified Text styling
 
 ## Perfect For
 
