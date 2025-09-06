@@ -2,14 +2,11 @@
     Login to Sheaf
 </x-slot>
 
-<form wire:submit="login"
-      class="mx-auto w-full max-w-md space-y-4">
+<form 
+    wire:submit="login"
+    class="mx-auto w-full max-w-md space-y-4"
+>
 
-      {{-- Divide --}}
-    <x-ui.separator label="Or"/>
-
-
-    {{-- Form --}}
     <div class="space-y-4">
         <x-ui.field>
             <x-ui.label>email address</x-ui.label>
@@ -30,7 +27,6 @@
         </x-ui.field>
     </div>
 
-    {{-- Action button --}}
     <x-ui.button 
         class="w-full"
         type="submit"
@@ -38,6 +34,11 @@
         Log in
     </x-ui.button>
 
-    <a class="text-base-200 text-sm underline"
-       href="{{ route('register') }}">I dont have an account? <span class="font-bold">Sign up</span></a>
+    <x-ui.link
+        variant="soft" 
+        href="{{ route('register') }}"
+    >
+        I dont have an account? 
+        <span class="underline">Sign up</span>
+    </x-ui.link>
 </form>

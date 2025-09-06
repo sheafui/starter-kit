@@ -6,10 +6,6 @@
     wire:submit="register"
     class="mx-auto w-full max-w-md space-y-4"
 >
-
-    <x-ui.separator label="Or"/>
-
-    {{-- Form --}}
     <div class="space-y-4 gap-y-1">
         <x-ui.field >
             <x-ui.label>name</x-ui.label>
@@ -60,6 +56,10 @@
         Register
     </x-ui.button>
 
-    <a class="text-base-200 text-sm underline"
-       href="{{ route('login') }}">Already have an account? <span class="font-bold">Log in</span></a>
+    <x-ui.link 
+        variant="soft"
+        href="{{ route('login') }}"
+    >
+        Already have an account? <span class="underline">Log in</span>
+    </x-ui.link>
 </form>
