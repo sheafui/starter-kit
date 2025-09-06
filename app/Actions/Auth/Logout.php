@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Actions\Auth;
 
+use App\Support\Toast;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,10 +21,7 @@ class Logout
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        session()->flash('notify', [
-            'content' => 'You\'re getting logged out successfully',
-            'type' => 'success'
-        ]);
+        Toast::success("You're getting logged out successfully");
 
         return redirect()->route('home');
     }

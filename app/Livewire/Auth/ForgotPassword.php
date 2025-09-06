@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace App\Livewire\Auth;
 
+use App\Support\Toast;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Illuminate\Support\Facades\Password;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
-class ForgotPassword extends Component 
+class ForgotPassword extends Component
 {
     public string $email;
 
@@ -32,10 +33,8 @@ class ForgotPassword extends Component
 
         $this->reset('email');
 
-        session()->flash('notify', [
-            'content' => "We have emailed your password reset link!",
-            'type' => 'success'
-        ]);
+        Toast::success("We have emailed your password reset link!");
+
         session()->flash('status', __($status));
     }
 

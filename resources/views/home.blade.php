@@ -20,7 +20,7 @@
 
     <!-- Title Content -->
     <div
-        class=" border-neutral-600/30 before:border-neutral-600/30 before: relative col-span-5 border border-t-0 border-dashed py-10 before:absolute before:-left-16 before:-top-16 before:h-32 before:w-32 before:animate-pulse before:rounded-full before:border before:border-dashed before:content-[''] lg:col-span-3 dark:before:border-white/20">
+        class=" border-neutral-600/30 before:border-neutral-600/30 before: relative col-span-5 border border-t-0 border-dashed py-10 before:absolute before:-left-16 before:-top-16 before:h-32 before:w-32 before:rounded-full before:border before:border-dashed before:content-[''] lg:col-span-3 dark:before:border-white/15">
 
         <h1 class="text-base-100 mx-auto px-4 text-3xl font-bold tracking-tight text-center sm:text-5xl md:max-w-lg md:px-0">
             Own Every Line of Your <br> Laravel UI
@@ -40,7 +40,7 @@
 
     <!-- Subtitle Content -->
     <div
-        class=" border-neutral-600/30  relative col-span-5 border border-t-0 border-dashed py-10 before:absolute before:-right-10 before:-top-10 before:z-40 before:h-20 before:w-20 before:rotate-45 before:border before:border-dashed before:content-[''] lg:col-span-3 before:border-neutral-600/30 dark:before:border-white/20 before:bg-background">
+        class=" border-neutral-600/30  relative col-span-5 border border-t-0 border-dashed py-10 before:absolute before:-right-10 before:-top-10 before:z-40 before:h-20 before:w-20 before:rotate-45 before:border before:border-dashed before:content-[''] lg:col-span-3 before:border-neutral-600/30 dark:before:border-white/15 before:bg-background">
 
         <x-ui.text class="opacity-50 mx-auto max-w-2xl px-4 text-center sm:text-lg md:px-0">
             Sheaf UI is a CLI-driven UI framework that scaffolds elegant Blade + Livewire components right into your codebase. It’s open source, production-ready, and fully yours.
@@ -64,13 +64,14 @@
 
     <!-- CTA Button -->
     <div
-        class="border-neutral-600/30 before:border-neutral-600/30 flex items-center justify-center relative col-span-3 border border-t-0 border-dashed py-6 before:absolute before:-bottom-5 before:-right-6 before:z-10 before:h-10 before:w-12 before:rounded-none before:border before:border-dashed before:content-[''] lg:col-span-1 dark:before:border-white/20 before:bg-background">
+        class="border-neutral-600/30 before:border-neutral-600/30 flex items-center justify-center relative col-span-3 border border-t-0 border-dashed py-6 before:absolute before:-bottom-5 before:-right-6 before:z-10 before:h-10 before:w-12 before:rounded-none before:border before:border-dashed before:content-[''] lg:col-span-1 dark:before:border-white/15 before:bg-background">
 
         <!-- SVG avec animation carrée -->
 
         <x-ui.button 
             href="https://sheafui.dev/docs/guides/overview" 
-            icon-after="plus"
+            iconAfter="arrow-up-right"
+            target="_blank"
         >
             Get started
         </x-ui.button>

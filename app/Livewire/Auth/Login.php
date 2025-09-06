@@ -6,6 +6,7 @@ namespace App\Livewire\Auth;
 
 use App\Constants;
 use App\Livewire\Forms\Auth\LoginForm;
+use App\Support\Toast;
 use Illuminate\Support\Facades\Session;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
@@ -23,18 +24,14 @@ final class Login extends Component
 
         Session::regenerate();
 
-        
-        session()->flash('notify', [
-            'content' => "You have successfully logged in!",
-            'type' => 'success'
-        ]);
+        Toast::success("You have successfully logged in!");
 
         $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
     }
 
     public function render()
     {
-                /** @var View $view */
+        /** @var View $view */
         $view = view('livewire.auth.login');
 
         return $view->layout('components.layouts.guest');
