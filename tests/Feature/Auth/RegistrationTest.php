@@ -20,7 +20,7 @@ test('register screen has form', function () {
 test('new users can register using the register screen', function () {
 
     livewire(Register::class)
-        ->set('form.username', 'Test User')
+        ->set('form.name', 'Test User')
         ->set('form.email', 'test@example.com')
         ->set('form.password', 'password')
         ->set('form.password_confirmation', 'password')
@@ -59,7 +59,7 @@ test('new users can\'t register without a valid name', function () {
         ->set('form.password', 'password')
         ->set('form.password_confirmation', 'password')
         ->call('register')
-        ->assertHasErrors(['form.username'])
+        ->assertHasErrors(['form.name'])
         ->assertNoRedirect();
 
     $this->assertGuest();

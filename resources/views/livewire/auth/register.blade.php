@@ -10,12 +10,12 @@
     {{-- Form --}}
     <div class="space-y-4 gap-y-1">
         <x-ui.field >
-            <x-ui.label>username</x-ui.label>
+            <x-ui.label>name</x-ui.label>
             <x-ui.input
-                wire:model.blur="form.username"
-                placeholder="Enter your username"
+                wire:model.blur="form.name"
+                placeholder="Enter your name"
             />
-            <x-ui.error name="form.username" />
+            <x-ui.error name="form.name" />
         </x-ui.field>
 
         <x-ui.field >
