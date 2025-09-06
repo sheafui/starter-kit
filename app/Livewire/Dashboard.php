@@ -10,7 +10,7 @@ class Dashboard extends Component
     {
         /** @var View $view */
         $view = view('livewire.dashboard');
-        
-        return $view->layout('components.layouts.app');
+
+        return $view->layout('components.layouts.dashboard');
     }
 }

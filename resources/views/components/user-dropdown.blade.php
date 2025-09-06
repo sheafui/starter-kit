@@ -4,16 +4,15 @@
 
  <x-ui.dropdown position="bottom-end">
     <x-slot:button class="justify-center">
-        <button variant="none" class="bg-base-200/6 text-base-100 ring-base-200/10 hover:bg-base-200/10 rounded-field inline-flex h-8 w-8 items-center justify-center text-sm font-medium ring-1 ring-inset">
-                <img src="https://gravatar.com/avatar/a8c27f85e99afbf7bc5616fc9409eb62?s=200&d=retro&r=x"
-                    alt="{{ $user->username }}"
-                    class="rounded-field h-6 w-6 object-cover"
-                >
-        </button>
+        <x-ui.avatar
+            :name="$user->name"
+            {{-- : name="$user->avatar" give avatar's image source if have any!  --}}
+            size="sm" 
+        />
     </x-slot:button>
 
     <x-slot:menu class="w-56">
-        <x-ui.dropdown.group label="signed in as">
+        <x-ui.dropdown.group label="Signed in as">
             <x-ui.dropdown.item>
                 {{ $user->email }}
             </x-ui.dropdown.item>
@@ -30,7 +29,7 @@
         <form
             action="{{ route('app.auth.logout') }}"
             method="post"
-            class="contents"
+            class="contents" {{-- this make the form does contribute the layotu, so it does not break --}}
         >
             @csrf
             <x-ui.dropdown.item as="button" type="submit">
