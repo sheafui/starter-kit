@@ -22,6 +22,10 @@ Route::get('/forgot-password', ForgotPassword::class)->name('forgot-password');
 
 Route::get('reset-password/{token}', ResetPassword::class)->name('password.reset');
 
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', 'you\'re in dashboard')->name('dashboard');
+});
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/auth/verify-email', VerifyEmail::class)
         ->name('verification.notice');
