@@ -1,4 +1,6 @@
 # SheafUI Official Starter Kit
+> [!WARNING]
+> This starter kit is currently work in progress. Features and design aren't complete .
 
 The official starter kit to jumpstart your next Laravel application, powered by the SheafUI component platform.
 
