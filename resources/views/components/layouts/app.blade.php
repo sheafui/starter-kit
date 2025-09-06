@@ -1,7 +1,8 @@
+<x-slot:title>
+    {{ $title ?? 'Sheaf UI' }}
+</x-slot:title>
+
 <x-layouts.base>
-    <x-slot:title>
-        {{ $title ?? 'Sheaf UI' }}
-    </x-slot:title>
 
      <x-layouts.partials.nav />
 

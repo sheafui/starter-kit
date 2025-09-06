@@ -9,7 +9,7 @@
 <div 
     class='flex items-center'>
     <label class="sr-only">
-        Theme
+        Theme Switcher
     </label>
 
     <div x-data>
