@@ -2,8 +2,10 @@
     Register an account
 </x-slot>
 
-<form wire:submit="register"
-      class="mx-auto w-full max-w-md space-y-4">
+<form 
+    wire:submit="register"
+    class="mx-auto w-full max-w-md space-y-4"
+>
 
     <x-ui.separator label="Or"/>
 

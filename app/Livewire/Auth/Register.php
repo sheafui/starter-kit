@@ -25,7 +25,7 @@ final class Register extends Component
             'type' => 'success'
         ]);
         
-        $this->redirectIntended(default: '/');
+        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
 
     }
 

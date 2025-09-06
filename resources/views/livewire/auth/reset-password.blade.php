@@ -1,7 +1,6 @@
 <div class="mx-auto mt-24 max-w-xl">
     <x-ui.fieldset label="Reset your password">
         <form wire:submit="resetPassword" x-data="form">
-           {{-- Original form fields converted to new UI components --}}
             <x-ui.field required>
                 <x-ui.label>email address</x-ui.label>
                 <x-ui.input 

@@ -29,7 +29,7 @@ final class Login extends Component
             'type' => 'success'
         ]);
 
-        $this->redirectIntended(default: '/');
+        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
     }
 
     public function render()
