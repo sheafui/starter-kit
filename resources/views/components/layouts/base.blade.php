@@ -12,7 +12,6 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.png') }}">
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-
         
         <style>
             /* gives the progress bar primary color */
@@ -21,9 +20,7 @@
             }
         </style>
 
-        @stack('docs-sidebar-styles')
-
-    </head>
+</head>
     <script>
         // this is script is essentiel to prevent page's flicker at render time
         const loadDarkMode = () => {
