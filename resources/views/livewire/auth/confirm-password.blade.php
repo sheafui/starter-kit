@@ -1,6 +1,6 @@
 
 <div class="mx-auto mt-24 max-w-xl">
-    <x-fieldset>
+    <x-ui.fieldset>
         <x-slot name="label">
             Confirm Password
         </x-slot>
@@ -21,5 +21,5 @@
                 save
             </x-ui.button>
         </form>
-    </x-fieldset>
+    </x-ui.fieldset>
 </div>

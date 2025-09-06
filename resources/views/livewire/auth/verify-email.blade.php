@@ -1,4 +1,4 @@
-<x-filament::fieldset class="max-w-3xl mx-auto mt-24 border dark:border-blue-500">
+<x-ui.fieldset class="max-w-3xl mx-auto mt-24 border dark:border-blue-500">
     <x-slot name="label">
         <p class="text-md font-semibold text-blue-500">Please Verify your Email:</p>
     </x-slot>
@@ -20,4 +20,4 @@
             </button>
         </div>
     </div>
-</x-filament::fieldset>
+</x-ui.fieldset>

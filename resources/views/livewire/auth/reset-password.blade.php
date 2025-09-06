@@ -34,17 +34,12 @@
                 <x-ui.error name="password_confirmation" />
             </x-ui.field>
             
-            <x-ui.button class="w-full mt-4"
+            <x-ui.button 
+                class="w-full mt-4"
                 type="submit"
-                wire:loading.class="opacity-50 duration-300 transition"
-                wire:target="resetPassword">
-                    Reset
-                <div class="hidden"
-                    wire:loading
-                    wire:target="login">
-                    <x-filament::loading-indicator class="h-5 w-5" />
-                </div>
+            >
+                Reset
             </x-ui.button>
         </form>
-    </x-fieldset>
+    </x-ui.fieldset>
 </div>
