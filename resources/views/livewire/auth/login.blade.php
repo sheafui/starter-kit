@@ -14,7 +14,7 @@
         <x-ui.field>
             <x-ui.label>email address</x-ui.label>
             <x-ui.input
-                wire:model.blur="form.email"
+                wire:model="form.email"
             />
             <x-ui.error name="form.email" />
         </x-ui.field>
@@ -22,7 +22,7 @@
         <x-ui.field>
             <x-ui.label>password</x-ui.label>
             <x-ui.input
-                wire:model.blur="form.password"
+                wire:model="form.password"
                 type='password'
                 revealable
             />

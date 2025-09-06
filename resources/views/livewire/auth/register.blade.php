@@ -14,7 +14,7 @@
         <x-ui.field >
             <x-ui.label>name</x-ui.label>
             <x-ui.input
-                wire:model.blur="form.name"
+                wire:model="form.name"
                 placeholder="Enter your name"
             />
             <x-ui.error name="form.name" />
@@ -23,7 +23,7 @@
         <x-ui.field >
             <x-ui.label>email address</x-ui.label>
             <x-ui.input
-                wire:model.blur="form.email"
+                wire:model="form.email"
                 type="email"
                 placeholder="Enter your email"
             />
@@ -33,7 +33,7 @@
         <x-ui.field >
             <x-ui.label>password</x-ui.label>
             <x-ui.input
-                wire:model.blur="form.password"
+                wire:model="form.password"
                 type="password"
                 revealable
                 placeholder="Create a secure password"
@@ -44,7 +44,7 @@
         <x-ui.field >
             <x-ui.label>password confirmation</x-ui.label>
             <x-ui.input
-                wire:model.blur="form.password_confirmation"
+                wire:model="form.password_confirmation"
                 type="password"
                 revealable
                 placeholder="Confirm your password"
