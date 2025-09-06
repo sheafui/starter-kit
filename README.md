@@ -58,6 +58,8 @@ Your starter kit comes pre-loaded with essential UI components:
 - [Toast](https://sheafui.dev/docs/components/toast) - Notification system
 - [Error](https://sheafui.dev/docs/components/error) - Error handling displays
 - [Text](https://sheafui.dev/docs/components/text) - Unified Text styling
+- [Heading](https://sheafui.dev/docs/components/heading) - Heading components
+- [Card](https://sheafui.dev/docs/components/card) - blocks of UI
 
 ## Perfect For
 
