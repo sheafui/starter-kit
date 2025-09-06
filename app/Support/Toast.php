@@ -13,12 +13,12 @@ final class Toast
 
     public static function warning(string $content): void
     {
-        static::add($content, 'success');
+        static::add($content, 'warning');
     }
 
     public static function error(string $content): void
     {
-        static::add($content, 'success');
+        static::add($content, 'error');
     }
 
     public static function info(string $content): void

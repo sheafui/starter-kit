@@ -12,6 +12,20 @@
                 <x-app.logo />
         </div>
 
+        <div class="flex gap-4">
+            <x-ui.link 
+                :href="route('dashboard')" 
+                variant="soft"
+            >
+                dashboard
+            </x-ui.link>
+            <x-ui.link 
+                :href="route('settings.account')" 
+                variant="soft">
+                Account
+            </x-ui.link>
+        </div>
+
         <div 
             class="flex lg:hidden gap-4 items-center"
         >
