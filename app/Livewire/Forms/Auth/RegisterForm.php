@@ -28,6 +28,7 @@ final class RegisterForm extends Form
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'string', 'confirmed', Password::defaults()],
         ]);
+        
         $validated['password'] = Hash::make($validated['password']);
 
         event(new Registered($user = User::create($validated)));

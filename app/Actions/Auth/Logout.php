@@ -25,6 +25,6 @@ class Logout
             'type' => 'success'
         ]);
 
-        return redirect()->route('guide.show', ['guide' => 'overview']);
+        return redirect()->route('home');
     }
 }

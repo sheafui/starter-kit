@@ -26,7 +26,7 @@ test('password can be confirmed', function () {
     livewire(ConfirmPassword::class)
         ->set('password', 'password')
         ->call('confirmPassword')
-        ->assertRedirect('/')
+        ->assertRedirect(route('dashboard'))
         ->assertHasNoErrors();
 });
 

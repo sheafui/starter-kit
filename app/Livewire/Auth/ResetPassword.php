@@ -58,7 +58,7 @@ final class ResetPassword extends Component
 
         Session::flash('status', __($status));
 
-        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+        $this->redirectRoute('login', navigate: true);
     }
 
     public function render()

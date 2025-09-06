@@ -48,6 +48,6 @@ test('users can logout from authentication', function () {
         ->withSession(['_token' => 'test_token'])
         ->post(route('app.auth.logout'), ['_token' => 'test_token']);
 
-    $response->assertRedirect(route('dashboard'));
+    $response->assertRedirect('/');
     $this->assertGuest();
 });
