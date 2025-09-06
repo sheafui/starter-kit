@@ -19,7 +19,6 @@ final class Register extends Component
     {
         $this->form->register();
 
-        $redirectUrl = Session::pull(Constants::AFTER_LOGIN_REDIRECT_URL) ?? route('guide.show', ['guide' => 'overview']);
 
         session()->flash('notify', [
             'content' => "Your account has been created successfully!",
@@ -32,6 +31,9 @@ final class Register extends Component
 
     public function render()
     {
-        return view('livewire.auth.register');
+                /** @var View $view */
+        $view = view('livewire.auth.register');
+
+        return $view->layout('components.layouts.app');
     }
 }

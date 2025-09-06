@@ -10,11 +10,8 @@ use Illuminate\Support\Facades\Password;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
-#[Layout('components.layouts.auth')]
-final class ForgotPassword extends Component implements HasForms
+class ForgotPassword extends Component 
 {
-    use InteractsWithForms;
-
     public string $email;
 
     public function sendPasswordResetLink(): void
@@ -44,6 +41,9 @@ final class ForgotPassword extends Component implements HasForms
 
     public function render()
     {
-        return view('livewire.auth.forgot-password');
+        /** @var View $view */
+        $view = view('livewire.auth.forgot-password');
+
+        return $view->layout('components.layouts.app');
     }
 }

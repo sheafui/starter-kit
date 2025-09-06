@@ -34,6 +34,9 @@ final class ConfirmPassword extends Component
 
     public function render()
     {
-        return view('livewire.auth.confirm-password');
+        /** @var View $view */
+        $view = view('livewire.auth.confirm-password');
+        
+        return $view->layout('components.layouts.app');
     }
 }

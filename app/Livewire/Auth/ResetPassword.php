@@ -63,6 +63,9 @@ final class ResetPassword extends Component
 
     public function render()
     {
-        return view('livewire.auth.reset-password');
+        /** @var View $view */
+        $view = view('livewire.auth.reset-password');
+
+        return $view->layout('components.layouts.app');
     }
 }

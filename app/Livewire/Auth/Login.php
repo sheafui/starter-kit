@@ -23,18 +23,20 @@ final class Login extends Component
 
         Session::regenerate();
 
-        $redirectUrl = Session::pull(Constants::AFTER_LOGIN_REDIRECT_URL) ?? route('guide.show', ['guide' => 'overview']);
         
         session()->flash('notify', [
             'content' => "You have successfully logged in!",
             'type' => 'success'
         ]);
 
-        $this->redirectIntended(default: $redirectUrl);
+        $this->redirectIntended(default: '/');
     }
 
     public function render()
     {
-        return view('livewire.auth.login');
+                /** @var View $view */
+        $view = view('livewire.auth.login');
+
+        return $view->layout('components.layouts.app');
     }
 }
