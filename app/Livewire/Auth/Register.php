@@ -34,6 +34,6 @@ final class Register extends Component
                 /** @var View $view */
         $view = view('livewire.auth.register');
 
-        return $view->layout('components.layouts.app');
+        return $view->layout('components.layouts.guest');
     }
 }

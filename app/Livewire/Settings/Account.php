@@ -1,0 +1,83 @@
+<?php
+
+namespace App\Livewire\Settings;
+
+use App\Models\User;
+use Illuminate\Container\Attributes\CurrentUser;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
+use Illuminate\Validation\ValidationException;
+use Livewire\Attributes\Validate;
+use Livewire\Component;
+
+class Account extends Component
+{
+    #[Validate('required|string|min:3|max:12')]
+    public string $name = '';
+
+    #[Validate('required|string|email')]
+    public string $email = '';
+
+    #[Validate('required|string|current_password')]
+    public string $current_password = '';
+
+    #[Validate('required|string|confirmed|min:8')]
+    public string $password = '';
+
+    public string $password_confirmation = '';
+
+    public function mount(#[CurrentUser] User $user)
+    {
+        $this->name = $user->name;
+        $this->email = $user->email;
+    }
+
+    public function saveChanges(#[CurrentUser] User $user)
+    {
+        $validated = $this->validate([
+            'name' => ['required', 'string', 'min:3', 'max:12'],
+            'email' => ['required', 'string', 'email'],
+        ]);
+
+        $user->update($validated);
+
+        $this->dispatch(
+            'notify',
+            content: 'Your account has been updated.',
+            type: 'success'
+        );
+    }
+
+    /**
+     * Update the password for the currently authenticated user.
+     */
+    public function updatePassword(#[CurrentUser] $user): void
+    {
+        try {
+            $validated = $this->validate([
+                'current_password' => ['required', 'string', 'current_password'],
+                'password' => ['required', 'string', Password::defaults(), 'confirmed'],
+            ]);
+        } catch (ValidationException $e) {
+            $this->reset('current_password', 'password', 'password_confirmation');
+
+            throw $e;
+        }
+
+        $user->update([
+            'password' => Hash::make($validated['password']),
+        ]);
+
+        $this->reset('current_password', 'password', 'password_confirmation');
+
+        $this->dispatch(
+            'notify',
+            content: 'Your password has been updated.',
+            type: 'success'
+        );
+    }
+    public function render()
+    {
+        return view('livewire.settings.account');
+    }
+}

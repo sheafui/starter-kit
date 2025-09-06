@@ -50,7 +50,7 @@
         <script>
             loadDarkMode()
         </script>
-        <x-ui.toast />
+        <x-ui.toast :maxToasts="1" />
     </body>
 
 </html>
