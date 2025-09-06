@@ -61,3 +61,15 @@ Your starter kit comes pre-loaded with essential UI components:
 ---
 
 Ready to build something amazing? Get started with SheafUI today! 🎉
+
+## Author 
+[MOHAMED CHARRAFI](https://github.com/CharrafiMed)
+
+## Others 
+
+the borders pattern used at home, auth pages was designed by [AYOUB EL HAJJI](https://github.com/Ayoubhj866)
+
+## License
+
+Sheaf UI is open source software licensed under the [MIT License](LICENSE).
+
