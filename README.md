@@ -2,6 +2,14 @@
 
 The official starter kit to jumpstart your next Laravel application, powered by the SheafUI component platform.
 
+## Installation
+to start using new laravel app using this skeleton
+
+```shell
+ laravel new example-name --using=sheaf/starter-kit
+```
+
+
 ##  Zero Dependency, Full Control
 
 This starter kit requires no external dependencies and gives you **100% ownership** of your code. While powered by SheafUI resources, every line of code is yours to modify and customize as needed.
