@@ -8,23 +8,27 @@
         class="mx-auto flex items-center justify-between px-6 py-3 text-base-100 lg:px-8"
         aria-label="global"
     >
-        <div class="flex pr-7">
-                <x-app.logo />
+        <div class="flex items-center pr-7">
+            <x-app.logo />
+            <div class="flex gap-4 ml-8">
+                <x-ui.link 
+                    :href="route('dashboard')" 
+                    :attributes="$attributes->when(Request::routeIs('dashboard'), fn($attr)=> $attr->class('dark:!text-white text-neutral-900'))"
+                    variant="soft"
+                >
+                    dashboard
+                </x-ui.link>
+
+                <x-ui.link 
+                    :href="route('settings.account')" 
+                    :attributes="$attributes->when(Request::routeIs('settings.account') , fn($attr)=> $attr->class('dark:!text-white text-neutral-900'))"
+                    variant="soft"
+                >
+                    account
+                </x-ui.link>
+            </div>
         </div>
 
-        <div class="flex gap-4">
-            <x-ui.link 
-                :href="route('dashboard')" 
-                variant="soft"
-            >
-                dashboard
-            </x-ui.link>
-            <x-ui.link 
-                :href="route('settings.account')" 
-                variant="soft">
-                Account
-            </x-ui.link>
-        </div>
 
         <div 
             class="flex lg:hidden gap-4 items-center"

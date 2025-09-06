@@ -5,6 +5,7 @@
  <x-ui.dropdown position="bottom-end">
     <x-slot:button class="justify-center">
         <x-ui.avatar
+            class="cursor-pointer"
             :name="$user->name"
             {{-- : name="$user->avatar" give avatar's image source if have any!  --}}
             size="sm" 
