@@ -21,16 +21,11 @@
         </div>
 
         {{-- Action button --}}
-        <x-ui.button class="w-full"
-                     type="submit"
-                     wire:loading.class="opacity-50 duration-300 transition"
-                     wire:target="sendPasswordResetLink">
+        <x-ui.button 
+            class="w-full"
+            type="submit"
+        >
             Send link to email
-            <div class="hidden"
-                 wire:loading
-                 wire:target="sendPasswordResetLink">
-                <x-filament::loading-indicator class="h-5 w-5" />
-            </div>
         </x-ui.button>
 
         <a class="text-base-200 text-sm underline"

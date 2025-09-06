@@ -5,17 +5,7 @@
 <form wire:submit="login"
       class="mx-auto w-full max-w-md space-y-4">
 
-    {{-- Socialite action buttons --}}
-    <div class="w-full text-center">
-        <x-ui.button
-            class="w-full"
-            href="{{ route('github.redirect') }}"
-            iconAfter="arrow-trending-up"
-        >Log in with GitHub</x-ui.button>
-
-    </div>
-
-    {{-- Divide --}}
+      {{-- Divide --}}
     <x-ui.separator label="Or"/>
 
 

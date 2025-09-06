@@ -14,15 +14,12 @@
                 </x-input.wrapper>
                 <x-error class="mt-2" :messages="$errors->get('password')" />
             </x-form.element>
-            <button class="mt-4 flex w-full rounded-xl bg-blue-500 px-4 py-2 text-white" type="submit"
-                wire:loading.class="opacity-50 duration-300 transition">
-                <div class="between flex w-full items-center justify-between">
-                    save
-                    <div class="hidden" wire:loading>
-                        <x-filament::loading-indicator class="h-5 w-5" />
-                    </div>
-                </div>
-            </button>
+            <x-ui.button 
+                class="mt-4 flex w-full rounded-xl bg-blue-500 px-4 py-2 text-white" 
+                type="submit"
+            >
+                save
+            </x-ui.button>
         </form>
     </x-fieldset>
 </div>

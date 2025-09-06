@@ -7,11 +7,12 @@ namespace App\Actions\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-final class Logout
+class Logout
 {
     /**
      * Log the current user out of the application.
-     */
+    */
+
     public function __invoke(Request $request)
     {
         Auth::logout();

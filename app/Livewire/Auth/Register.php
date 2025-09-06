@@ -25,7 +25,7 @@ final class Register extends Component
             'type' => 'success'
         ]);
         
-        $this->redirectIntended(default: $redirectUrl);
+        $this->redirectIntended(default: '/');
 
     }
 
