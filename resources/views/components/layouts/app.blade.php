@@ -3,7 +3,8 @@
 </x-slot:title>
 
 <x-layouts.base>
-    {{-- <x-layouts.partials.nav /> --}}
+    <x-layouts.partials.nav />
+
     <div class="max-w-3xl mx-auto">
         {{ $slot }}
     </div>

@@ -12,6 +12,6 @@ class Home extends Component
         /** @var View $view */
         $view = view('home');
 
-        return $view->layout('components.layouts.app');
+        return $view->layout('components.layouts.guest');
     }
 }

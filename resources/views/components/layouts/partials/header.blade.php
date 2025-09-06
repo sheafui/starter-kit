@@ -1,11 +1,10 @@
-{{-- this navbar used in app pages (when the user authenticated)  --}}
 <header 
     x-data="{ open: false }"
     x-on:keydown.window.escape="open = false"
     class="border-b-neutral-100 dark:border-b-neutral-800 dark:bg-neutral-900 bg-neutral-50 fixed inset-x-0 top-0 z-50 border-b"
 >
     <nav 
-        class="mx-auto flex items-center justify-between px-6 py-3 text-base-100 lg:px-8"
+        class="mx-auto flex items-center justify-between p-6 text-base-100 lg:px-8"
         aria-label="global"
     >
         <div class="flex pr-7">
@@ -38,6 +37,15 @@
         </div>
 
         <div class="hidden gap-4 lg:flex lg:items-center lg:justify-end">
+            @guest
+                <div class="space-x-4">
+                    <a href="{{ route('login') }}"
+                       class="text-sm font-semibold leading-6 text-neutral-900 dark:text-neutral-200">Login</a>
+                    <a href="{{ route('register') }}"
+                       class="rounded-md border border-neutral-300/40 bg-neutral-50 px-3 py-1 text-sm font-semibold text-neutral-900 dark:border-white/20 dark:bg-white/5 dark:text-white">Register</a>
+                </div>
+            @endguest
+
             @auth
                 <x-user-dropdown/>
             @endauth

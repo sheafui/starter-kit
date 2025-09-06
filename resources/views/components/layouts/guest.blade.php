@@ -4,7 +4,7 @@
 
 <x-layouts.base>
 
-    <x-layouts.partials.nav />
+    <x-layouts.partials.header />
     
     {{ $slot }}
 
