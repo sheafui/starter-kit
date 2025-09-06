@@ -6,7 +6,6 @@
      <x-layouts.partials.nav />
 
 
-    {{-- Content --}}
     {{ $slot }}
 
     <x-layouts.partials.footer />

@@ -78,9 +78,10 @@
             <x-ui.button 
                 href="https://sheafui.dev/docs/guides/overview" 
                 icon-after="plus"
-                class="bg-primary-brand text-primary-content-brand hover:bg-primary-brand/80" 
+                class="dark:bg-neutral-800 bg-neutral-100 dark:text-white text-neutral-900 hover:bg-neutral-800" 
                 icon-classes="w-4">Get
-                started</x-ui.button>
+                started
+            </x-ui.button>
         </div>
 
         <div
@@ -117,4 +118,4 @@
 
 </div>
 
-</x-layouts.app
+</x-layouts.app>

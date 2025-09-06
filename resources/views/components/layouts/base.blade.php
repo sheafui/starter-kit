@@ -17,7 +17,7 @@
         <style>
             /* gives the progress bar primary color */
             :root {
-                --livewire-progress-bar-color: var(--color-primary-brand);
+                --livewire-progress-bar-color: var(--color-primary);
             }
         </style>
 
