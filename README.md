@@ -16,13 +16,20 @@ to start using new laravel app using this skeleton
 
 This starter kit requires no external dependencies and gives you **100% ownership** of your code. While powered by SheafUI resources, every line of code is yours to modify and customize as needed.
 
-## Features
+## ✨ Features
 
-- [x] **SheafUI Integration** - Optional setup for complete development with SheafUI platform
+- [x] **SheafUI Integration** - Optional setup for complete development with the SheafUI platform
 - [x] **Complete Auth System** - Login, register, logout, email verification, password reset/forgot, password confirmation - all with comprehensive tests
 - [x] **Clean Dark Theme** - Seamless light/dark mode switching
 - [x] **Flexible Toast System** - User-friendly notifications out of the box
-- [ ] **Basic Account Management** - comming soon 
+- [x] **Basic Account Management** - Update account information (name, email) and change password
+
+> [!NOTE]
+> Dashboard and settings pages are temporary implementations. They will be refactored once the `sidebar`, `header`, and `navlist` components are built and integrated.
+
+> [!WARNING]
+> Tests are still needed for the basic account management features.
+
 
 ## Tech Stack
 
