@@ -26,7 +26,7 @@ test('new users can register using the register screen', function () {
         ->set('form.password_confirmation', 'password')
         ->call('register')
         ->assertHasNoErrors()
-        ->assertRedirect(route('guide.show', ['guide' => 'overview']));
+        ->assertRedirect(route('dashboard', false));
 
     $this->assertAuthenticated();
 });

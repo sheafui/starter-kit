@@ -23,7 +23,7 @@ test('users can authenticate using login screen', function () {
         ->set('form.password', 'password')
         ->call('login')
         ->assertHasNoErrors()
-        ->assertRedirect(route('guide.show', ['guide' => 'overview'], absolute: false));
+        ->assertRedirect(route('dashboard', absolute: false));
 
     $this->assertAuthenticated();
 });
@@ -34,7 +34,7 @@ test('users can not authenticate using invalid password', function () {
         ->set('form.password', 'wrong-password')
         ->call('login')
         ->assertHasErrors()
-        ->assertNoRedirect(route('guide.show', ['guide' => 'overview'], absolute: false));
+        ->assertNoRedirect(route('dashboard', absolute: false));
 
     $this->assertGuest();
 });
@@ -48,6 +48,6 @@ test('users can logout from authentication', function () {
         ->withSession(['_token' => 'test_token'])
         ->post(route('app.auth.logout'), ['_token' => 'test_token']);
 
-    $response->assertRedirect(route('guide.show', ['guide' => 'overview']));
+    $response->assertRedirect(route('dashboard'));
     $this->assertGuest();
 });

@@ -5,15 +5,15 @@
             Confirm Password
         </x-slot>
         <form wire:submit="confirmPasswordm" x-data="form">
-            <x-form.element label="password">
-                <x-input.wrapper>
-                    <x-input type="password" wire:model="password" x-ref="password" />
-                    <x-slot name="suffix">
-                        <x-input.password-suffix trigger="password" method="togglePasswordVisibility('password')" />
-                    </x-slot>
-                </x-input.wrapper>
-                <x-error class="mt-2" :messages="$errors->get('password')" />
-            </x-form.element>
+            <x-ui.field>
+                <x-ui.label>password</x-ui.label>
+                <x-ui.input
+                    wire:model.blur="form.password"
+                    type='password'
+                    revealable
+                />
+                <x-ui.error name="password" />
+            </x-ui.field>
             <x-ui.button 
                 class="mt-4 flex w-full rounded-xl bg-blue-500 px-4 py-2 text-white" 
                 type="submit"
