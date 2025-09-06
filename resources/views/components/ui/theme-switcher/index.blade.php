@@ -7,7 +7,7 @@
 ])
 
 <div 
-    class='ml-6 flex items-center  pl-6'>
+    class='flex items-center'>
     <label class="sr-only">
         Theme
     </label>
