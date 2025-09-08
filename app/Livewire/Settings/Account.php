@@ -3,12 +3,15 @@
 namespace App\Livewire\Settings;
 
 use App\Models\User;
+use App\Support\Toast;
 use Illuminate\Container\Attributes\CurrentUser;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules\Password;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Validation\Rules\Password;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\Validate;
+use Illuminate\Validation\Rule;
 use Livewire\Component;
+
 
 class Account extends Component
 {
@@ -36,16 +39,31 @@ class Account extends Component
     {
         $validated = $this->validate([
             'name' => ['required', 'string', 'min:3', 'max:12'],
-            'email' => ['required', 'string', 'email'],
+            'email' => [
+                'required',
+                'string',
+                'lowercase',
+                'email',
+                'max:255',
+                Rule::unique(User::class)->ignore($user->id),
+            ],
         ]);
 
-        $user->update($validated);
+        $user->fill($validated);
+        
+        // If the email changed we need to make it unverified, for security reasons 
+        if ($user->isDirty('email')) {
+            $user->email_verified_at = null;
+        }
 
-        $this->dispatch(
-            'notify',
-            content: 'Your account has been updated.',
-            type: 'success'
-        );
+        $user->save();
+
+        Toast::success('Your account has been updated.');
+        // $this->dispatch(
+        //     'notify',
+        //     content: '',
+        //     type: 'success'
+        // );
     }
 
     /**
