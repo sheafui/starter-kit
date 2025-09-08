@@ -25,8 +25,10 @@ This starter kit requires no external dependencies and gives you **100% ownershi
 > [!NOTE]
 > Dashboard and settings pages are temporary implementations. They will be refactored once the `sidebar`, `header`, and `navlist` components are built and integrated.
 
-> [!WARNING]
-> Tests are still needed for the basic account management features.
+> [!NOTE]
+> also avatar uplaod will be added once the file upload components is built and integrated
+
+
 
 
 ## Tech Stack
