@@ -7,7 +7,7 @@ trait HasToast
 {
     /**
      * Dispatch a success toast notification
-     */ 
+     */
     public function toastSuccess(string $content): void
     {
         $this->toast($content, 'success');
@@ -42,9 +42,10 @@ trait HasToast
      */
     public function toast(string $content, string $type = 'info'): void
     {
-        $this->dispatch('notify', [
-            'content' => $content,
-            'type' => $type
-        ]);
+        $this->dispatch(
+            'notify',
+            content: $content,
+            type: $type
+        );
     }
 }

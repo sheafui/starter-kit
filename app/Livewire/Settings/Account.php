@@ -86,11 +86,7 @@ class Account extends Component
 
         $this->reset('current_password', 'password', 'password_confirmation');
 
-        $this->dispatch(
-            'notify',
-            content: 'Your password has been updated.',
-            type: 'success'
-        );
+        $this->toastSuccess('Your password has been updated.');
     }
     public function render()
     {

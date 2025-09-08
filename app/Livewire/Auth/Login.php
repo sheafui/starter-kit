@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Livewire\Auth;
 
 use App\Constants;
+use App\Livewire\Concerns\HasToast;
 use App\Livewire\Forms\Auth\LoginForm;
 use App\Support\Toast;
 use Illuminate\Support\Facades\Session;
@@ -14,6 +15,7 @@ use Livewire\Component;
 #[Layout('components.layouts.auth')]
 final class Login extends Component
 {
+
     public LoginForm $form;
 
     public function login()
@@ -24,7 +26,7 @@ final class Login extends Component
 
         Session::regenerate();
 
-        Toast::success("You have successfully logged in!");
+        Toast::success("You have successfully logged in!"); 
 
         $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
     }
