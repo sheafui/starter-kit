@@ -28,11 +28,7 @@ final class Toast
 
     public static function add(string $content, string $type): void
     {
-        // if we're inside livewire component we use typical dispatch, otherwise  we use sessions  
-        if (app('livewire')->isLivewireRequest()) {
-            dd('livewire components');
-        }
-        
+
         Session::flash('notify', [
             'content' => $content,
             'type' => $type

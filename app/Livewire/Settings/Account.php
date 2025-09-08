@@ -11,10 +11,12 @@ use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\Validate;
 use Illuminate\Validation\Rule;
 use Livewire\Component;
-
+use App\Livewire\Concerns\HasToast;
 
 class Account extends Component
 {
+    use HasToast;
+
     #[Validate('required|string|min:3|max:12')]
     public string $name = '';
 
@@ -50,7 +52,7 @@ class Account extends Component
         ]);
 
         $user->fill($validated);
-        
+
         // If the email changed we need to make it unverified, for security reasons 
         if ($user->isDirty('email')) {
             $user->email_verified_at = null;
@@ -58,12 +60,8 @@ class Account extends Component
 
         $user->save();
 
-        Toast::success('Your account has been updated.');
-        // $this->dispatch(
-        //     'notify',
-        //     content: '',
-        //     type: 'success'
-        // );
+
+        $this->toastSuccess('Your account has been updated.');
     }
 
     /**
