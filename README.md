@@ -61,9 +61,9 @@ Your starter kit comes pre-loaded with essential UI components:
 
 ## Perfect For
 
-- New Laravel projects requiring solid UI foundation
-- Developers who want proven components without vendor lock-in
-- Teams needing authentication and theming out of the box
+- New Laravel projects requiring solid UI foundation.
+- Developers who want proven components without vendor lock-in.
+- Teams needing authentication and theming out of the box.
 
 ---
 

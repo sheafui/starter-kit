@@ -22,7 +22,6 @@
                     />
                     <x-ui.error name="email" />
                 </x-ui.field>
-                
                 <x-ui.button 
                     type="submit"
                 >Save changes</x-ui.button>
