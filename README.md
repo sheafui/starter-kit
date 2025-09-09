@@ -37,7 +37,7 @@ This starter kit requires no external dependencies and gives you **100% ownershi
 - **Livewire 3** - Modern reactive components  
 - **Heroicons** - Beautiful SVG icons via `wireui/heroicons`
 - **Sheaf CLI** - SheafUI command-line tools
-- **Tailwind 4** - Elegant testing framework
+- **Tailwind 4** - Modern utility-first CSS framework
 - **Pest 4** - Elegant testing framework
 
 ## Included Components
