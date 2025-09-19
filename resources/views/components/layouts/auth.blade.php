@@ -20,7 +20,7 @@
                 </div>
                 <!-- Form section -->
                 <div
-                     class="dark:border-neutral-800 border-neutral-400 before:dark:border-neutral-800 before: relative col-span-5 border border-t-0 border-dashed before:absolute before:-left-16 before:-top-16 before:h-32 before:w-32 before:animate-pulse before:rounded-full before:border before:border-dashed before:content-[''] lg:col-span-3 dark:before:border-white/20">
+                     class="dark:border-neutral-800 border-neutral-400 before:dark:border-neutral-800 relative col-span-5 border border-t-0 border-dashed before:absolute before:-left-16 before:-top-16 before:h-32 before:w-32 before:animate-pulse before:rounded-full before:border before:border-dashed before:content-[''] lg:col-span-3 dark:before:border-white/20">
                     <div class="mx-auto flex max-w-sm flex-col items-center justify-center py-4 md:min-h-[60vh]">
                         <div class="py-6">
                             <x-app.logo />
@@ -40,7 +40,7 @@
                      style="mask: linear-gradient(to right, transparent 0%, black 80%, black 100%); -webkit-mask: linear-gradient(to right, transparent 0%, black 80%, black 100%);">
                 </div>
                 <div
-                     class="dark:border-neutral-800 border-neutral-400 before:dark:border-neutral-800 border-neutral-400 relative col-span-5 border !border-b-0 border-t-0 border-dashed py-10 before:absolute before:-right-10 before:-top-10 before:z-40 before:h-20 before:w-20 before:rotate-45 before:border before:border-dashed before:bg-background before:content-[''] lg:col-span-3 dark:before:border-white/20">
+                     class="dark:border-neutral-800 border-neutral-400 before:dark:border-neutral-800 relative col-span-5 border !border-b-0 border-t-0 border-dashed py-10 before:absolute before:-right-10 before:-top-10 before:z-40 before:h-20 before:w-20 before:rotate-45 before:border before:border-dashed before:bg-background before:content-[''] lg:col-span-3 dark:before:border-white/20">
 
                     <!-- SVG -->
                     {{-- <svg class="pointer-events-none absolute -right-10 -top-10 z-50 h-20 w-20 rotate-45"
