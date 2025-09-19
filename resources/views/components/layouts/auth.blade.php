@@ -20,7 +20,7 @@
                 </div>
                 <!-- Form section -->
                 <div
-                     class="dark:border-neutral-800 border-neutral-400 before:dark:border-neutral-800 border-neutral-400 before: relative col-span-5 border border-t-0 border-dashed before:absolute before:-left-16 before:-top-16 before:h-32 before:w-32 before:animate-pulse before:rounded-full before:border before:border-dashed before:content-[''] lg:col-span-3 dark:before:border-white/20">
+                     class="dark:border-neutral-800 border-neutral-400 before:dark:border-neutral-800 before: relative col-span-5 border border-t-0 border-dashed before:absolute before:-left-16 before:-top-16 before:h-32 before:w-32 before:animate-pulse before:rounded-full before:border before:border-dashed before:content-[''] lg:col-span-3 dark:before:border-white/20">
                     <div class="mx-auto flex max-w-sm flex-col items-center justify-center py-4 md:min-h-[60vh]">
                         <div class="py-6">
                             <x-app.logo />
