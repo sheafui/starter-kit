@@ -13,7 +13,7 @@
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "livewire/livewire": "^3.6",
-        "sheaf/cli": "^1.0",
+        "sheaf/cli": "^1.1",
         "wireui/heroicons": "^2.9"
     },
     "require-dev": {
