@@ -1,5 +1,4 @@
-{{-- once I build the sidebar, header and navlist components I will refactor to them (asap) --}}
-<div class="flex gap-6 mt-50">
+<div class="flex flex-col gap-6 lg:flex-row">
     <x-ui.card 
         size="xl"
         class="mx-auto"
