@@ -1,7 +1,11 @@
 <x-ui.input.options.button
     x-on:click="
-        $refs.input.value = '';
-        $refs.input.dispatchEvent(new Event('input'))"
+        const input = $el.closest('[data-slot=input-actions]').parentElement.querySelector('input[data-control-id=input]');
+        if (input) {
+            input.value = '';
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+    "
 >     
     <x-ui.icon name="x-mark" />
 </x-ui.input.options.button>

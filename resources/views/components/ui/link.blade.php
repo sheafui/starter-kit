@@ -23,11 +23,4 @@ $classes = [
 ];
 @endphp
 
-<a 
-    {{ $attributes->class(Arr::toCssClasses($classes))  }}
-    data-slot="link" 
-    @if($openInNewTab) 
-        target="_blank" 
-    @endif>
-    {{ $slot }}
-</a>
+<a {{ $attributes->class(Arr::toCssClasses($classes)) }} data-slot="link" @if($openInNewTab) target="_blank" @endif>{{ $slot }}</a>
