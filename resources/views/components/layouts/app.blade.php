@@ -19,20 +19,18 @@
             </x-slot:brand>
 
             <x-ui.navlist class="mt-4">
-                <x-ui.navlist.group label="Platform">
-                    <x-ui.navlist.item
-                        label="Dashboard"
-                        icon="home"
-                        :href="route('dashboard')"
-                        wire:navigate.hover
-                    />
-                    <x-ui.navlist.item
-                        label="Account"
-                        icon="cog-6-tooth"
-                        :href="route('settings.account')"
-                        wire:navigate.hover
-                    />
-                </x-ui.navlist.group>
+                <x-ui.navlist.item
+                    label="Dashboard"
+                    icon="home"
+                    :href="route('dashboard')"
+                    wire:navigate.hover
+                />
+                <x-ui.navlist.item
+                    label="Account"
+                    icon="cog-6-tooth"
+                    :href="route('settings.account')"
+                    wire:navigate.hover
+                />
             </x-ui.navlist>
 
             <x-ui.sidebar.push />

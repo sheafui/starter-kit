@@ -41,7 +41,7 @@
         });
     </script>
     
-    <body class="bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50">
+    <body class="bg-neutral-100 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50">
 
         {{ $slot }}
 

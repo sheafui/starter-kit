@@ -1,7 +1,7 @@
 <header 
     x-data="{ open: false }"
     x-on:keydown.window.escape="open = false"
-    class="border-b-neutral-100 dark:border-b-neutral-800 dark:bg-neutral-900 bg-neutral-50 fixed inset-x-0 top-0 z-50 border-b"
+    class="border-b-neutral-100 dark:border-b-white/5 dark:bg-neutral-950 bg-neutral-50 fixed inset-x-0 top-0 z-50 border-b"
 >
     <nav 
         class="mx-auto flex items-center justify-between p-6 text-base-100 lg:px-8"
