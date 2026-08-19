@@ -6,8 +6,6 @@ namespace App\Livewire\Auth;
 
 use App\Livewire\Concerns\HasToast;
 use App\Support\Toast;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Forms\Contracts\HasForms;
 use Illuminate\Support\Facades\Password;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
