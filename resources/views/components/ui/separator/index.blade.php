@@ -34,7 +34,7 @@
         {{-- we need to make the element can contributes to space-y-* likely if we don't use flex --}}
         <div 
             data-orientation="{{ $orientation }}" 
-            {{ $attributes }} 
+            {{ $attributes->class('w-full') }} 
             data-slot="separator"
             role="separator" 
             aria-orientation="{{ $orientation }}"

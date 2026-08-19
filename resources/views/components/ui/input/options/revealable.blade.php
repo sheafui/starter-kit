@@ -2,7 +2,7 @@
     x-data="{
         revealed: false,
         toggleReveal() {
-            const input = this.$refs.input;
+            const input = $el.closest('[data-slot=input-actions]').parentElement.querySelector('input[data-control-id=input]');
             if (!input) return;
             
             this.revealed = !this.revealed;
@@ -16,12 +16,12 @@
 >     
     <x-ui.icon 
         name="eye-slash" 
-        class="hidden [[data-slot-revealed]>&]:block"
+        class="hidden [[data-slot-revealed]>&]:inline-flex"
         aria-hidden="true"
     />
     <x-ui.icon 
         name="eye" 
-        class="block [[data-slot-revealed]>&]:hidden"
+        class="inline-flex [[data-slot-revealed]>&]:hidden"
         aria-hidden="true"
     />
 </x-ui.input.options.button>

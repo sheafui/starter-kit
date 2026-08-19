@@ -13,28 +13,28 @@ use App\Livewire\Settings\Account;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', Livewire\Home::class)->name('home');
+Route::livewire('/', Livewire\Home::class)->name('home');
 
 /** AUTH ROUTES */
-Route::get('/register', Register::class)->name('register');
+Route::livewire('/register', Register::class)->name('register');
 
-Route::get('/login', Login::class)->name('login');
+Route::livewire('/login', Login::class)->name('login');
 
-Route::get('/forgot-password', ForgotPassword::class)->name('forgot-password');
+Route::livewire('/forgot-password', ForgotPassword::class)->name('forgot-password');
 
-Route::get('reset-password/{token}', ResetPassword::class)->name('password.reset');
+Route::livewire('reset-password/{token}', ResetPassword::class)->name('password.reset');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', Dashboard::class)->name('dashboard');
-    Route::get('/settings/account', Account::class)->name('settings.account');
+    Route::livewire('/dashboard', Dashboard::class)->name('dashboard');
+    Route::livewire('/settings/account', Account::class)->name('settings.account');
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/auth/verify-email', VerifyEmail::class)
+    Route::livewire('/auth/verify-email', VerifyEmail::class)
         ->name('verification.notice');
     Route::post('/logout', Logout::class)
         ->name('app.auth.logout');
-    Route::get('confirm-password', ConfirmPassword::class)
+    Route::livewire('confirm-password', ConfirmPassword::class)
         ->name('password.confirm');
 });
 

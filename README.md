@@ -33,8 +33,8 @@ This starter kit requires no external dependencies and gives you **100% ownershi
 
 ## Tech Stack
 
-- **Laravel 12** - Latest Laravel framework
-- **Livewire 3** - Modern reactive components  
+- **Laravel 13** - Latest Laravel framework
+- **Livewire 4** - Modern reactive components  
 - **Heroicons** - Beautiful SVG icons via `wireui/heroicons`
 - **Sheaf CLI** - SheafUI command-line tools
 - **Tailwind 4** - Modern utility-first CSS framework
